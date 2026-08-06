@@ -1,0 +1,41 @@
+name: Feature Request
+description: Propose a new feature or screen
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: "Please describe the feature you would like to add."
+  - type: input
+    id: screen
+    attributes:
+      label: Screen or component name
+      placeholder: e.g. LessonDetails, BlueprintEditor
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      placeholder: What should this feature do?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: List the conditions that must be met
+    validations:
+      required: true
+  - type: dropdown
+    id: owner
+    attributes:
+      label: Feature owner
+      options:
+        - Naomi Ssenabulya (auth/verification/profile)
+        - Joy Banadda (portfolio/invest)
+        - Khalan Nakibuka (home/blueprints/community/learning)
+        - Divine Kibazo (security/tax/notifications)
+        - Unassigned
+    validations:
+      required: true
