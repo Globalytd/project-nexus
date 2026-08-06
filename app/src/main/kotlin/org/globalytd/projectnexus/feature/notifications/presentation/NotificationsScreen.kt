@@ -40,13 +40,14 @@ fun NotificationsScreen() {
     ) {
         Spacer(modifier = Modifier.height(spacing.md))
         NexusSectionHeader(title = "Notifications")
-        listOf(
+        val notificationItems = listOf(
             "Account Activity" to "Sign-ins, password changes",
             "Portfolio Activity" to "Price alerts, dividends",
             "Security Alerts" to "Suspicious activity, new devices",
             "Learning Reminders" to "Continue your courses",
             "Community Updates" to "Replies, mentions, challenges"
-        ).forEachIndexed { index, (label, desc) ->
+        )
+        notificationItems.forEachIndexed { index, (label, desc) ->
             var enabled by remember { mutableStateOf(true) }
             Column {
                 Row(
@@ -59,9 +60,7 @@ fun NotificationsScreen() {
                     }
                     Switch(checked = enabled, onCheckedChange = { enabled = it })
                 }
-                if (index < 4) {
-                    NexusDivider()
-                }
+                if (index < notificationItems.lastIndex) NexusDivider()
             }
         }
     }

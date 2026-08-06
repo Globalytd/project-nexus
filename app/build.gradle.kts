@@ -22,6 +22,7 @@ android {
 
     buildTypes {
         release {
+            // TODO: Enable minification before release. Disabled during skeleton phase.
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),

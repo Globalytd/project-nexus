@@ -77,7 +77,8 @@ fun EmailRegistrationScreen(onRegistrationSuccess: () -> Unit, onBackClick: () -
                 NexusPrimaryButton(
                     text = "Continue",
                     onClick = onRegistrationSuccess,
-                    enabled = termsAccepted && fullName.isNotBlank() && email.isNotBlank()
+                    enabled = termsAccepted && fullName.isNotBlank() && email.isNotBlank() &&
+                            password.isNotBlank() && password == confirmPassword
                 )
                 Spacer(modifier = Modifier.height(spacing.md))
             }

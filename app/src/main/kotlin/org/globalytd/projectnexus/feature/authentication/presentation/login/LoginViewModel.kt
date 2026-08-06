@@ -25,6 +25,7 @@ sealed interface LoginUiAction {
     data object PasswordVisibilityChanged : LoginUiAction
     data object LoginClicked : LoginUiAction
     data object ErrorDismissed : LoginUiAction
+    data object LoginSuccessConsumed : LoginUiAction
 }
 
 @HiltViewModel

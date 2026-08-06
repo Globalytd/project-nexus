@@ -18,6 +18,8 @@ fun NavGraphBuilder.authenticationGraph(navController: NavHostController) {
             onLoginSuccess = { navController.navigate(NexusDestinations.VERIFICATION_INTRO) },
             onRegisterClick = { navController.navigate(NexusDestinations.REGISTRATION_OPTIONS) },
             onForgotPasswordClick = { navController.navigate(NexusDestinations.FORGOT_PASSWORD) },
+            // TODO: When passkey authentication is implemented, navigate to a PASSKEY_SIGN_IN
+            // destination instead of PASSKEY_SETUP. PASSKEY_SETUP is for new passkey registration only.
             onPasskeyClick = { navController.navigate(NexusDestinations.PASSKEY_SETUP) }
         )
     }
