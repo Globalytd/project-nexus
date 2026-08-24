@@ -3,8 +3,8 @@ pluginManagement {
         eachPlugin {
             when (requested.id.id) {
                 "com.android.application" -> useModule("com.android.tools.build:gradle:8.5.2")
-                "org.jetbrains.kotlin.android",
-                "org.jetbrains.kotlin.plugin.compose" -> useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.21")
+                "org.jetbrains.kotlin.android" -> useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.21")
+                "org.jetbrains.kotlin.plugin.compose" -> useModule("org.jetbrains.kotlin:compose-compiler-gradle-plugin:2.0.21")
                 "com.google.dagger.hilt.android" -> useModule("com.google.dagger:hilt-android-gradle-plugin:2.51.1")
                 "com.google.devtools.ksp" -> useModule("com.google.devtools.ksp:symbol-processing-gradle-plugin:2.0.21-1.0.27")
             }
