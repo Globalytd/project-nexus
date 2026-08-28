@@ -57,6 +57,41 @@ Every portfolio value, user name, transaction, and learning record is hardcoded 
 - No networking (Retrofit not yet added)
 - No real payment or brokerage integration
 
+## Developer Screen Ownership
+
+> Ownership indicates primary responsibility and does not prevent collaboration or code review.
+
+### 👩‍💻 Naomi Ssenabulya — Authentication & Identity
+| Screen | Feature |
+|---|---|
+| Login / Register | `feature/authentication` |
+| KYC / Document Upload | `feature/verification` |
+| Profile Settings | `feature/settings` (profile sub-section) |
+
+### 👩‍💻 Joy Banadda — Portfolio & Investing
+| Screen | Feature |
+|---|---|
+| Portfolio Allocation & Rebalancing | `feature/portfolio` (data/logic layer) |
+| Invest / Trade | `feature/invest` |
+
+### 👨‍💻 Khalan Nakibuka — Home & Discovery
+| Screen | Feature |
+|---|---|
+| Home Dashboard | `feature/home` |
+| Portfolio (UI/Presentation) | `feature/portfolio` (presentation layer) |
+| Blueprints | `feature/blueprints` |
+| Community | `feature/community` |
+| Learning | `feature/learning` |
+
+### 👨‍💻 Divine Kibazo — Security & Infrastructure
+| Screen | Feature |
+|---|---|
+| Security Settings / Biometrics | `feature/security` |
+| Tax Center | `feature/tax` |
+| Notifications | `feature/notifications` |
+
+> **Note:** `feature/portfolio` is shared — Joy owns the data/business logic layer while Khalan owns the presentation/UI layer.
+
 ## Next Development Steps
 
 1. **Naomi Ssenabulya** – Implement real authentication (Firebase Auth or custom backend)
