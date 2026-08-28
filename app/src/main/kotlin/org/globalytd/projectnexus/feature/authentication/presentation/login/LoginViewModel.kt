@@ -47,6 +47,7 @@ class LoginViewModel @Inject constructor(
             }
             LoginUiAction.LoginClicked -> performLogin()
             LoginUiAction.ErrorDismissed -> _uiState.value = _uiState.value.copy(errorMessage = null)
+            LoginUiAction.LoginSuccessConsumed -> _uiState.value = _uiState.value.copy(loginSuccess = false)
         }
     }
 
